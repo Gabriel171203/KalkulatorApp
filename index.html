@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kalkulator Sederhana</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <div class="keys">
+            <button onclick="appendNumber('7'); playButtonSound()">7</button>
+            <button onclick="appendNumber('8'); playButtonSound()">8</button>
+            <button onclick="appendNumber('9'); playButtonSound()">9</button>
+            <button onclick="clearDisplay(); playButtonSound()">C</button>
+            <button onclick="appendNumber('4'); playButtonSound()">4</button>
+            <button onclick="appendNumber('5'); playButtonSound()">5</button>
+            <button onclick="appendNumber('6'); playButtonSound()">6</button>
+            <button onclick="appendNumber('+'); playButtonSound()">+</button>
+            <button onclick="appendNumber('1'); playButtonSound()">1</button>
+            <button onclick="appendNumber('2'); playButtonSound()">2</button>
+            <button onclick="appendNumber('3'); playButtonSound()">3</button>
+            <button onclick="appendNumber('-'); playButtonSound()">-</button>
+            <button onclick="appendNumber('0'); playButtonSound()">0</button>
+            <button onclick="appendNumber('.'); playButtonSound()">.</button>
+            <button onclick="calculateResult(); playButtonSound()">=</button>
+            <button onclick="appendNumber('*'); playButtonSound()">*</button>
+            <button onclick="appendNumber('/'); playButtonSound()">/</button>
+            <button onclick="appendNumber('('); playButtonSound()">(</button>
+            <button onclick="appendNumber(')'); playButtonSound()">)</button>
+            <button onclick="appendNumber('^'); playButtonSound()">^</button>
+            <button onclick="appendNumber('sqrt('); playButtonSound()">√</button>
+            <button onclick="appendNumber('%'); playButtonSound()">%</button>
+            <button onclick="deleteLastInput(); playButtonSound()">⌫</button>
+            </div>
+        </div>
+        <label class="switch">
+            <input type="checkbox" onclick="toggleDarkMode()">
+            <span class="slider round"></span> 
+        </label>
+        <audio id="buttonSound">
+            <source src="Calculator-sound(mp3cut.net).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="history"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
